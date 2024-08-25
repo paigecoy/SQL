@@ -1,0 +1,20 @@
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, product TEXT, quantity INTEGER, price INTEGER, size TEXT, color TEXT);
+INSERT INTO clothing VALUES (1, "Women's Shirt", 15, 25.99, "Small", "Blue");
+INSERT INTO clothing VALUES (2, "Women's Shirt", 15, 25.99, "Medium", "Blue");
+INSERT INTO clothing VALUES (3, "Women's Shirt", 15, 25.99, "Large", "Blue");
+INSERT INTO clothing VALUES (4, "Women's Shirt", 15, 25.99, "XLarge", "Blue");
+INSERT INTO clothing VALUES (5, "Hat", 5, 12.99, "O/S", "White");
+INSERT INTO clothing VALUES (6, "Hat", 5, 12.99, "O/S", "Red");
+INSERT INTO clothing VALUES (7, "Hat", 5, 12.99, "O/S", "Grey");
+INSERT INTO clothing VALUES (8, "Hat", 5, 12.99, "O/S", "Pink");
+INSERT INTO clothing VALUES (9, "Men's Shirt", 15, 25.99, "Medium", "Grey");
+INSERT INTO clothing VALUES (10, "Men's Shirt", 15, 25.99, "Large", "Grey");
+INSERT INTO clothing VALUES (11, "Men's Shirt", 15, 25.99, "XLarge", "Grey");
+INSERT INTO clothing VALUES (12, "Men's Shirt", 15, 25.99, "XXLarge", "Grey");
+INSERT INTO clothing VALUES (13, "Men's Shirt", 15, 25.99, "Medium", "Grey");
+INSERT INTO clothing VALUES (14, "Men's Shirt", 15, 25.99, "Large", "White");
+INSERT INTO clothing VALUES (15, "Men's Shirt", 15, 25.99, "XLarge", "White");
+
+SELECT product, SUM(price) FROM clothing GROUP BY product;
+
+SELECT product, SUM(quantity) FROM clothing GROUP BY product;
